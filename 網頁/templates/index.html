@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+	<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+		crossorigin="anonymous"></script>
+
+
+	<!-- <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script> -->
+
+	<link rel="stylesheet" href="../static/css/style.css">
+	<title>澳洲自助遊</title>
+	<link rel="icon" type="image/x-icon" href="../static/pictures/pandaicon.ico" />
+</head>
+
+<body>
+
+	<header>
+		{% include "_mel.html" %}
+	</header>
+	<section id='intro'>
+		<div id="demo" class="carousel slide" data-ride="carousel">
+
+			<!-- 指示- -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+				<li data-target="#demo" data-slide-to="4"></li>
+				<li data-target="#demo" data-slide-to="5"></li>
+				<li data-target="#demo" data-slide-to="6"></li>
+				<li data-target="#demo" data-slide-to="7"></li>
+				<li data-target="#demo" data-slide-to="8"></li>
+				<li data-target="#demo" data-slide-to="9"></li>
+			</ul>
+
+			<!-- 輪播圖片 -->
+			<div class="carousel-inner">
+				<div class="carousel-item active ">
+					<img src="../static/images/1-Perth.jpg" class="d-block w-100" height="630" alt="Perth">
+					<div class="carousel-caption">
+						<h3>Perth</h3>
+						<!-- <p>柔軟的沙灘和美麗的公園，遇上充滿生機的都市小酒吧、創意餐廳和街頭藝術，成就了珀斯在兩方面都同樣出眾。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/2-Darwin.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Darwin</h3>
+						<!-- <p>達爾文氣氛輕鬆隨意，卻處處盡是精彩刺激，亞洲美食市場、鱷魚公園、露天電影院及黃昏郵輪之旅等活動應有盡有。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/3-Cairns.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Cairns</h3>
+						<!-- <p>是通往昆士蘭州熱帶北部的門戶，是悠閒自在的城市，最適合在戶外活動。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/4-Brisbane.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Brisbane</h3>
+						<!-- <p>探索昆士蘭陽光燦爛的首府—布里斯本。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/5-Gold Coast.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Gold Coast</h3>
+						<!-- <p>從主題公園到購物，再由衝浪到原始雨林，許多盡情享受黃金海岸的好方法。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/6-Sydney.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Sydney</h3>
+						<!-- <p>在澳洲的港口城市尋求陽光和美好時刻。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/7-Canberra.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Canberra</h3>
+						<!-- <p>在澳洲首府感受歷史、藝術和戶外活動的精彩結合。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/8-Hobart.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Hobart</h3>
+						<!-- <p>荷伯特城市雖小，卻有非凡夢想—藝術大膽、飲食界百花齊放、自然景觀琳瑯滿目。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/9-Adelaide.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h3>Adelaide</h3>
+						<!-- <p>阿德萊德正迅速成為澳洲的生活品味之都。</p> -->
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="../static/images/10-melbourne.jpg" class="d-block w-100" height="630">
+					<div class="carousel-caption">
+						<h1 class="display-4">Days in Melbourne</h1>
+						<!-- <p class="lead">find out more</p> -->
+						<a class="btn btn-primary btn-lg" href="mel.html" role="button">join!</a>
+					</div>
+				</div>
+				<!-- 左右切换按钮 -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
+
+
+		</div>
+
+
+
+
+
+		</div>
+
+
+	</section>
+
+	<!-- <section id='second'>
+		<div class="container">
+			<div class='row'>
+				<div class='col-md-8 offset-md-2 text-center'>
+					<h3>熱門關鍵字</h3>
+					<div class='centerd'>
+						<div class='keyword'>
+							<ul>
+								<button type="button" class="btn btn-info"
+									href="/cht/ksearch_new/search.jsp?kwd=韓劇景點">abc</button>
+								<button type="button" class="btn btn-info"
+									href="/cht/ksearch_new/search.jsp?kwd=韓劇景點">panda</button>
+								<button type="button" class="btn btn-info"
+									href="/cht/ksearch_new/search.jsp?kwd=韓劇景點">panda</button>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+				</div>
+
+	</section> -->
+
+	<section id='email'>
+		<div class="container">
+			<div class='row'>
+				<div class='col-md-8 offset-md-2 text-center'>
+					<h3>加入Panda 的Email List</h3>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-8 offset-md-2 text-left'>
+					<p>讓我們有最新旅程便通知你吧！</p>
+					<div class="input-group input-group-lg">
+						<input type="text" class="form-control" aria-label="Sizing example input"
+							aria-describedby="inputGroup-sizing-lg" placeholder="你的電郵">
+					</div>
+					<a class="btn btn-primary btn-lg" href="#" role="button">提交</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<footer style="background-color:NavajoWhite">
+
+		<div class="container" >
+			<div class='row'>
+				<div class='col-md-4 text-center'>
+					<img src='../static/pictures/logo.jpg' width='170'>
+					<p class='text-center'>最簡易的安排行程工具!!</p>
+				</div>
+				<div class='col-md-4 text-left'>
+					<h4>連結</h4>
+					<ul>
+						<li><a href='index.html'>主頁</a></li>
+						<li><a href='diy.html'>自訂旅程</a></li>
+						<li><a href='days_schedule.html'>推薦旅程</a></li>
+						<li><a href='faq.html'>常見問題</a></li>
+					</ul>
+				</div>
+				<div class='col-md-4 text-center'>
+					<h4>聯絡我們</h4>
+					<p class='text-center'>這裡是地址<br>
+						Phone: (02)1234-5678<br>
+						E-Mail: <a href='mailto:xxx@gmail.com'>xxx@gmail.com</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- <script src='js/script.js'></script> -->
+</body>
+
+</html>

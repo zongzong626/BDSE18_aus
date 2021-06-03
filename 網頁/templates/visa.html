@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>澳洲自助遊</title>
+    <link rel="icon" type="image/x-icon" href="../static/pictures/pandaicon.ico" />
+
+</head>
+
+<body>
+
+    <header>
+        {% include "_mel.html" %}
+    </header>
+
+    <section id='singlearticle' style="background-image:url(../static/pictures/background1.jpg); background-attachment:fixed; background-repeat: no-repeat;">
+        <div class="container">
+
+            <div class='row'>
+                <div class='col-md-10 offset-md-2 text-center'>
+
+                    <h1>簽證、海關及檢疫</h1>
+                    <div class="accordion" id="accordionExample">
+
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <h5>我需要簽證才能進入澳洲境內嗎？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>除非您是澳洲或紐西蘭公民，否則必須持有有效澳洲簽證，方能進出澳洲。
+                                        紐西蘭護照持有人可在抵達澳洲後申請簽證。其他護照持有人必須在離家前申請簽證。
+                                        您可在最近的澳洲大使館或領事館申請一系列簽證，包括旅遊簽證和工作假期簽證。
+                                        如需更多資料，請瀏覽澳洲內政事務部（Department of Home Affairs）網頁。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <h5>我應該申請哪類旅遊簽證？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>澳洲有各種不同簽證可供旅客申請。您應申請的簽證類型視乎逗留時間、護照及到訪澳洲的目的而定。</p>
+
+                                    <p style="font-size:160%;background-color:#CECEFF;">eVisitor（子分類651)</p>
+                                    <p>這項免費簽證為旅遊業或因業務需要而須多次到訪澳洲的人士而設，讓持有人在12個月期間一次逗留澳洲最多三個月。
+                                        這項簽證可供不少歐洲國家護照持有人申請，且不可延長逗留期間。</p>
+
+                                    <p style="font-size:160%;background-color:#DDDDFF">電子旅遊簽證（子分類601）</p>
+                                    <p>這項簽證容許您一年內多次到訪澳洲，每次逗留期間最長三個月。
+                                        這項簽證適合在澳洲以外國家和地區居住的護照持有人申請。電子旅遊簽證申請並不需要收費，惟網上申請須收取服務費$20澳元。</p>
+
+                                    <p style="font-size:160%;background-color:#ECECFF">旅遊簽證（子分類600）</p>
+                                    <p>旅遊簽證為不合資格申請eVisitor或電子旅遊簽證的人士而設。
+                                        這項簽證容許您就旅遊或商業目的到訪澳洲，逗留時間可達三、六或十二個月。申請者遞交申請時須支付費用。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <h5>可以用旅遊簽證延長逗留期限嗎？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>如您已經身處澳洲，並持有有效電子旅遊簽證（子分類﹕601），即可申請其他簽證，如訪客簽證（子分類﹕600），來延長逗留期限。
+                                        eVisitor（子分類﹕651）不能延長。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <h5>如需要在澳洲合法工作，需要哪類簽證？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>工作假期（Working Holiday Maker）計劃鼓勵部份國家之間的文化交流及建立更深厚聯繫，
+                                        讓成年的年輕人（18至30歲）在享受長假的同時，可以短期工作支援財政。
+
+                                        澳洲提供兩類工作假期簽證﹕</p>
+
+                                    <p style="font-size:160%;background-color:#DDDDFF">工作假期簽證（子分類417）</p>
+                                    <p>適用於持有比利時、加拿大、塞浦路斯共和國、丹麥、愛沙尼亞、芬蘭、法國、德國、香港、愛爾蘭共和國、意大利、日本、韓國、
+                                        馬爾他、荷蘭、挪威、瑞典、台灣及英國護照的人士申請。</p>
+
+                                    <p style="font-size:160%;background-color:#ECECFF">工作假期簽證（子分類462）</p>
+                                    <p>適合持有阿根廷、奧地利、智利、中華人民共和國、捷克共和國、匈牙利、印尼、以色列、盧森堡、馬來西亞、秘魯、波蘭、葡萄牙、聖馬力諾、
+                                        新加坡、斯洛伐克共和國、斯洛文尼亞、西班牙、泰國、土耳其、美國、烏拉圭及越南護照的人士申請。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        <h5>澳洲禁止帶同什麼物件入境？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>澳洲海關法例禁止帶同毒品、類固醇、武器、槍械及受保護野生動物進入澳洲。部分常見物品也禁止入境，
+                                        例如新鮮或包裝食品、水果、蛋、肉類、植物、種子、動物皮和羽毛。詳情請瀏覽Australian Border Force網站。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                                        aria-controls="collapseSix">
+                                        <h5>可以帶多少錢進入澳洲？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>澳洲並無限制帶入或帶出的外幣金額。然而，如您需要帶同超過$10,000澳元現金入境，則必須申報金額。
+                                        請參閱AUSTRAC網站（www.austrac.gov.au/travellers），以了解詳情並取得申報表格。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingSeven">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        <h5>申報的物品會怎樣處理？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>您申報的物品將由負責評估物品隨附風險程度的生物安全保障職員檢查。在大多數情況下，物品都屬低風險，會於檢查後退還。
+                                        然而，如果生物安全保障職員認為物品有潛在風險，您可就該物品作出付款，或就出口該物品付款，或自願放棄處置該物品。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" id="headingEight">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        <h5>進入澳洲的免稅限制是什麼？</h5>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>一般商品︰每位成人（18歲或以上）價值$900澳元的商品；每位兒童價值$450澳元的商品。
+                                        酒精飲品﹕每位成人酒精飲品（烈酒、葡萄酒和香檳）最多2.25公升（0.5英制加侖或0.59美制加侖）。
+                                        煙草﹕每位成人可攜帶不多於25支香煙或25克（0.88盎司）雪茄或煙草，及一包已開封香煙。</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <footer style="background-color:NavajoWhite">
+
+        <div class="container">
+            <div class='row'>
+                <div class='col-md-4 text-center'>
+                    <img src='../static/pictures/logo.jpg' width='170'>
+                    <p class='text-center'>最簡易的安排行程工具!!</p>
+                </div>
+                <div class='col-md-4 text-left'>
+                    <h4>連結</h4>
+                    <ul>
+                        <li><a href='index.html'>主頁</a></li>
+                        <li><a href='diy.html'>自訂旅程</a></li>
+                        <li><a href='days_schedule.html'>推薦旅程</a></li>
+                        <li><a href='faq.html'>常見問題</a></li>
+                    </ul>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <h4>聯絡我們</h4>
+                    <p class='text-center'>這裡是地址<br>
+                        Phone: (02)1234-5678<br>
+                        E-Mail: <a href='mailto:xxx@gmail.com'>xxx@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

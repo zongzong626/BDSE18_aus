@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+
+    <!-- <script src="https://kit.fontawesome.com/68f8681dba.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>澳洲自助遊</title>
+    <link rel="icon" type="image/x-icon" href="../static/pictures/pandaicon.ico" />
+
+</head>
+
+<body>
+
+    <header>
+        {% include "_mel.html" %}
+    </header>
+    <h1>My google Map</h1>
+    <div id="map"></div>
+    <input id="autocomplete" placeholder="Enter a place" type="text" />
+
+
+    <!-- 才倫test -->
+    <!-- {% for test in outputs1 %} -->
+
+    <!-- <script>
+        // var lat1 = '{{test[5]}}' 
+        // var lng1 = '{{test[6]}}'
+
+        // var lat2 = parseFloat(lat1)
+        // var lng2 = parseFloat(lng1)
+        // // console.log('印字')
+        // console.log(lat2, lng2)
+
+        // var markers = [
+        //     {
+        //         coords: { lat: lat2, lng: lng2 },
+        //          iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+        //         content: '<h1>"{{test[1]}}" </h1>'
+        //     }
+        // ]
+
+        // console.log(markers[0])
+        // console.log(markers)
+    </script> -->
+
+    <!-- {% endfor %} -->
+    <!-- 才倫test -->
+
+
+    <script>
+
+        function initMap() {
+            //Map options
+            var options = {
+                zoom: 8,
+                center: { lat: -37.840935, lng: 144.946457 }
+            }
+            //New map
+            var map = new
+                google.maps.Map(document.getElementById('map'), options);
+
+            // Listen for click on map
+            google.maps.event.addListener(map, 'click', function (event) {
+                // Add marker
+                addMarker({ coords: event.latLng });
+            });
+
+
+            // 暫時註解
+            // Add marker
+            // var marker = new google.maps.Marker({
+            //   position:{lat:-38.285405,lng:145.093449},
+            //   map:map,
+            //   icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+            // });
+
+            // var infoWindow = new google.maps.InfoWindow({
+            //   content:'<h1>Mornington Peninsula</h1>'
+            // });
+
+            // marker.addListener('click', function(){
+            //   infoWindow.open(map, marker);
+            // });
+            // 暫時註解
+
+            // Array of markers
+            //     var markers = [
+            //         {
+
+            //             coords: { lat: { { k['latitude'] } } , lng: { { k['longitude'] } } },
+            // iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+            //     content: '<h1>{{ outputs1['name'] }} </h1>'
+
+            // }
+
+            // test-----------------------------------------
+
+
+            var test = '{{outputs1}}';
+            console.log(test.length)
+
+            var testarrary = new Array();
+            var testarrary = test.split("&#39;");
+            console.log(testarrary.length)
+
+
+
+            var last = []
+            for (let i = 0; i < testarrary.length; i++) {
+                if (isNaN(testarrary[i]) != true) {
+                    last.push(testarrary[i])
+                }
+            }
+
+
+            // 建立點點------------------------------------------------------
+            var leg = last.length /2 
+            console.log(leg)
+            var markers = []
+            for (let j = 0; j < leg ; j++) {
+                // console.log(last[j * 2], last[j * 2 + 1])
+                var mar = {
+                    coords: { lat: parseFloat(last[j * 2]), lng: parseFloat(last[j * 2 + 1]) },
+                    iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                    content: '<h1>{{ outputs1[j] }} </h1>'
+                }
+                markers.push(mar)
+            }
+            // 建立點點------------------------------------------------------
+
+            // console.log(markers[0])
+            // console.log(markers[1])
+            // console.log(markers)
+
+            // test-----------------------------------------
+
+
+            // var markers = [
+            //     {
+            //         coords: { lat: lat2, lng: lng2 },
+            // iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+            //     content: '<h1>{{ outputs1[1] }} </h1>'
+            // },
+
+
+
+
+
+            // 暫時註解
+            // var markers = [
+            //     {
+            //         coords: { lat: lat2, lng: lng2 },
+            // iconImage: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+            //     content: '<h1>{{ outputs1[1] }} </h1>'
+            // },
+
+            // {
+            //     coords: { lat: -38.48349, lng: 145.23102 },
+            //     content: '<h1>Phillip Island</h1>'
+            // },
+
+            // {
+            //     coords: { lat: -30.109424, lng: 121.262637 }
+            //     //Goldfields
+            // }
+
+            // ];
+            // 暫時註解
+
+            // Loop through markers
+            for (var i = 0; i < markers.length; i++) {
+                // Add marker
+                addMarker(markers[i]);
+            }
+
+            // Add Marker Function
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                    //icon:props.iconImage
+                });
+
+                // Check for customicon
+                if (props.iconImage) {
+                    // Set icon image
+                    marker.setIcon(props.iconImage);
+                }
+
+                // Check content
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    });
+                }
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1YjD2VOIoxOSOUC9tKs-NVzZm58idDy4&callback=initMap">
+        </script>
+
+
+
+    <footer>
+
+        <div class="container">
+            <div class='row'>
+
+
+                <div class='col-md-4 text-center'>
+                    <img src='../static/pictures/logo.jpg' width='170'>
+                    <p class='text-center'>最簡易的安排行程工具!!</p>
+                </div>
+                <div class='col-md-4 text-left'>
+                    <h4>連結</h4>
+                    <ul>
+                        <li><a href='index.html'>主頁</a></li>
+                        <li><a href='diy.html'>自訂旅程</a></li>
+                        <li><a href='days_schedule.html'>推薦旅程</a></li>
+                        <li><a href='faq.html'>常見問題</a></li>
+                    </ul>
+                </div>
+                <div class='col-md-4 text-center'>
+                    <h4>聯絡我們</h4>
+                    <p class='text-center'>這裡是地址<br>
+                        Phone: (02)1234-5678<br>
+                        E-Mail: <a href='mailto:xxx@gmail.com'>xxx@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
